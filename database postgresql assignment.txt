@@ -1,0 +1,56 @@
+assignments;
+1.>:
+select first_name,last_name as length from customer where length (last_name)>3;
+
+2.<:
+select first_name||'  '||last_name as length from customer where length(first_name)<10;
+
+3.<=:
+ select first_name||'  '||last_name as length from customer where length(first_name)<=10;
+
+4.>=:
+ select first_name||'  '||last_name as length from customer where length(first_name)>=10;
+
+5.=:
+select first_name as full_name from customer where length(first_name)=10;
+
+6.!=:
+select last_name as full_name from customer where length(last_name)!=10;
+
+7.not:
+select * from customer where not store_id=10;
+
+8.and:
+    select * from customer where store_id=1 and customer_id>10;
+9.or:
+    select * from film_category where category_id=6 or category_id=11;
+
+10.in:
+    select * from film_category where category_id in (6,11);
+
+11.not in:
+    select * from film_category where category_id not in (6,11);
+
+12.between:
+    select * from film_category where category_id between 5 and 15;
+
+13.not between:
+    select * from film_category where category_id not between 5 and 15;
+
+14.like:
+     select * from customer where first_name like 'Ja%';
+
+15.not like:
+      select * from customer where first_name not like 'Ja%';
+
+16.is null:
+      select * from customer where first_name is null;
+
+17.is not null:'
+      select * from customer where first_name is not null;
+
+18.limit:
+      select * from customer limit 10;
+
+19.offset:
+      select * from customer offset 2 limit 10;
